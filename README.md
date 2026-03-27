@@ -39,12 +39,6 @@ npx prisma db push
 npm run seed
 ```
 
-**Demo Credentials:**
-| Role | Email | Password |
-|------|-------|----------|
-| Admin | admin@skyvoyage.com | admin123 |
-| Passenger | passenger@example.com | user123 |
-
 ### 4. Run Development Servers
 
 In **two separate terminals**:
@@ -103,21 +97,3 @@ airline_manage/
 - **Clean Architecture** — NestJS modules, DTOs, services, controllers
 
 ---
-
-## 🚢 Deployment
-
-### Frontend → Vercel
-```bash
-cd frontend
-npx vercel --prod
-```
-Set env var `NEXT_PUBLIC_API_URL` to your backend URL.
-
-### Backend → Render / Railway
-1. Connect your repo
-2. Set build command: `npm run build`
-3. Set start command: `npm run start:prod`
-4. Add env vars: `DATABASE_URL`, `JWT_SECRET`, `FRONTEND_URL`, `PORT`
-
-### Database → Supabase
-Already hosted. Just use the connection string in your backend `.env`.
